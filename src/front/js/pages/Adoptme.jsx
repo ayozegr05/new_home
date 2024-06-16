@@ -91,10 +91,7 @@ export const Adoptme = () => {
     const genderMatch = selectedGender === "" || selectedGender === animal.gender;
     return sizeMatch && ageMatch && genderMatch;
   });
-  console.log("FILTEEEEEREEEEDS:", filteredAnimals);
-  console.log("PEEEEEEEEEEETSFILTEEEEEREEEEDS:", filteredPets);
 
-  
   return (
     <div className="container-fluid px-4 mb-3">
       <h1 className="esmeralda text-center mt-5 mb-5">Adopt a pet</h1>
@@ -169,13 +166,6 @@ export const Adoptme = () => {
                   <div className="card-body">
                     <h4 className="card-title d-flex justify-content-center"><strong >{animal.name}</strong></h4>
                     <p className="card-text fs-5"><strong >Breed mixture: </strong>{animal.mixture ? animal.mixture : 'N/A'}</p>
-                    {/* <p><strong>Size: </strong>{animal.size ? animal.size : 'N/A'}</p> */}
-                    {/* <p><strong>City: </strong>{animal.city ? animal.city : 'N/A'}</p> */}
-                    {/* <p ><strong>Animal Status: </strong>{animal.animal_status ? animal.animal_status : 'N/A'}</p> */}
-                    {/* <p><strong>Color: </strong>{animal.color ? animal.color : 'N/A'}</p>
-                    <p><strong>Descriptions: </strong>{animal.description ? animal.description : 'N/A'}</p>
-                    <p><strong>City: </strong>{animal.contact ? animal.contact : 'N/A'}</p>
-                    <p><strong>Contact: </strong>{animal.phone ? animal.phone : 'N/A'}</p> */}
                     <div className="mt-2 d-flex justify-content-center mb-2">
                     <Link to="/animal" state={animal} className="btn btn-success btn-lg"><strong>More details</strong></Link>
                   </div>
@@ -194,9 +184,6 @@ export const Adoptme = () => {
                   <div className="card-body">
                     <h4 className="card-title d-flex justify-content-center mb-3 "><strong>{animal.name}</strong></h4>
                     <p className="card-text fs-5"><strong>Breed mixture: </strong>{animal.breeds ? animal.breeds.primary : 'N/A'}</p>
-                    {/* <p className="card-text fs-4"><strong>Size: </strong>{animal.size ? animal.size : 'N/A'}</p>
-                    <p className="card-text fs-4"><strong>Age: </strong>{animal.age ? animal.age : 'N/A'}</p>
-                  <p className="card-text fs-4"><strong>Gender: </strong>{animal.gender ? animal.gender : 'N/A'}</p> */}
                   </div>
                   <div className="mt-2 d-flex justify-content-center mb-2">
                     <Link to="/animalapi" state={animal} className="btn btn-success btn-lg"><strong>More details</strong></Link>

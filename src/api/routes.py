@@ -31,7 +31,7 @@ def upload_image():
 @api.route('/users', methods=['POST', 'GET'])
 def handle_users():
    if request.method == 'GET':
-    users = User.query.all()  # Obtén todos los usuarios
+    users = User.query.all()  
     user_data = []
 
     for user in users:

@@ -95,7 +95,7 @@ export const Lostanimals = () => {
         phone,
         size: size,
         color,
-        typeOfAnimal: type,
+        typeOfAnimal: type || "Dog",
         description,
         animalStatus: status,
         gender: gender,
@@ -109,7 +109,6 @@ export const Lostanimals = () => {
       };
       console.log("Datos del animal que se envian: ", animalData)
 
-      // Llamar a la función del store para publicar el animal
       const success = await actions.publishAnimal(animalData);
       if (success) {
         await actions.get_all_animals();

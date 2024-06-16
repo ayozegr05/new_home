@@ -56,7 +56,7 @@ export const Home = () => {
                 <h1 className="coloresmeralda mt-5 my-3">These are some of our pets...</h1>
             </div>
             <div className="row mt-3  d-flex justify-content-center custom-card-container">
-                    {store.animals.slice(0, 4).map((animal, index) => (
+                    {store.animals.filter(animal => animal.animal_status === "Adoption").slice(0, 4).map((animal, index) => (
                 <div key={index} className="col-md-2 col-sm-3 custom-card-item">
                  <Link to="animal" state={animal} className="card-link">
                     <div className="card custom-card">

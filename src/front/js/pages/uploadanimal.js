@@ -92,10 +92,10 @@ const UploadAnimal = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
      
-    if (!name || !city || !phone || !type || !description || !status || !contact) {
-      alert("Please fill in all required fields.");
-      return;
-    }
+    // if (!name || !city || !phone || !type || !description || !status || !contact) {
+    //   alert("Please fill in all required fields.");
+    //   return;
+    // }
   
     try {
       const form = new FormData();
@@ -120,7 +120,7 @@ const UploadAnimal = () => {
         phone,
         size: size,
         color,
-        typeOfAnimal: type,
+        typeOfAnimal: type || "Dog",
         description,
         animalStatus: status,
         gender: gender,
@@ -386,7 +386,7 @@ const UploadAnimal = () => {
                     <option value="Baby">Baby</option>
                     <option value="Young">Young</option>
                     <option value="Adult">Adult</option>
-                    <option value="Senio">Senior</option>
+                    <option value="Senior">Senior</option>
                   </select>
                 </div>
                 <div className="col-md-4">
