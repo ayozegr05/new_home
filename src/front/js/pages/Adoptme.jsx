@@ -78,7 +78,7 @@ export const Adoptme = () => {
       mode: 'cors',
       headers: {
         'Content-Type': 'application/vnd.api+json',
-        'Authorization': 'YPxOk3nv'
+        'Authorization': process.env.RESCUEGROUPS_API_KEY
       },
       redirect: 'follow'
     };

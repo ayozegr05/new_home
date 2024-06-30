@@ -81,6 +81,7 @@
 		"cheerio": "^1.0.0-rc.12",
 		"cloudinary": "^1.40.0",
 		"date-fns": "^2.30.0",
+		"dotenv": "^16.4.5",
 		"font-awesome": "^4.7.0",
 		"jquery": "^3.7.1",
 		"popper.js": "^1.16.1",
